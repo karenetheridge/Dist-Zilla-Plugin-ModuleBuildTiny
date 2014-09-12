@@ -3,6 +3,8 @@ Revision history for Dist-Zilla-Plugin-ModuleBuildTiny
 {{$NEXT}}
           detect minimum perl version from configure, build, test and runtime
           phases instead of just runtime
+          inject required version of Module::Build::Tiny into build prereqs,
+          as well as configure
 
 0.008     2014-10-30 16:05:29+01:00 Europe/Amsterdam
           Build.PL is now created at the correct phase (gather_files), with

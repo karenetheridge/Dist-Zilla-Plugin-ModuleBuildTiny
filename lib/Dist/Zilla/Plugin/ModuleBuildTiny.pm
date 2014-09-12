@@ -50,7 +50,8 @@ BUILD_PL
 sub register_prereqs {
 	my ($self) = @_;
 
-	$self->zilla->register_prereqs({ phase => 'configure' }, 'Module::Build::Tiny' => $self->version);
+	$self->zilla->register_prereqs({ phase => $_ }, 'Module::Build::Tiny' => $self->version)
+		for qw(configure build);
 
 	return;
 }
